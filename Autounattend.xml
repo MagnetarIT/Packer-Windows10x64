@@ -103,7 +103,7 @@
       </OOBE>
       <FirstLogonCommands>
         <SynchronousCommand wcm:action="add">
-          <CommandLine>powershell -NoLogo -ExecutionPolicy RemoteSigned -File a:\configure-winrm.ps1</CommandLine>
+          <CommandLine>powershell -NoLogo -ExecutionPolicy RemoteSigned -File a:\update-windows.ps1</CommandLine>
           <Description>update windows (update-windows.ps1)</Description>
           <Order>1</Order>
         </SynchronousCommand>
