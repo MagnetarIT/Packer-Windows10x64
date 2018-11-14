@@ -79,6 +79,11 @@ function Install-WindowsUpdates() {
                 }
             }
 
+            # Exception for patch that will not download KB2267602
+            if ($($Update.Title) -like "*KB2267602*"){
+                bool]$addThisUpdate = $false
+            }
+
             if ([bool]$addThisUpdate) {
                 LogWrite "Adding: $($Update.Title)"
                 $UpdatesToDownload.Add($Update) |Out-Null
